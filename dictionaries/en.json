@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "OL | Optimization & Logistics",
+    "description": "AI-driven optimization for the future. We turn chaos into systems that run better, with less friction, and more control."
+  },
+  "nav": {
+    "home": "Home",
+    "approach": "Approach",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Turn chaos into systems.",
+    "subtitle": "AI-driven optimization for the future. We step into what's broken and make it work—faster, cleaner, smarter.",
+    "cta": "Request Assessment"
+  },
+  "services": {
+    "title": "What We Do",
+    "diagnose": {
+      "title": "Diagnose",
+      "description": "Break problems down to first principles. Identify what's actually causing friction."
+    },
+    "design": {
+      "title": "Design",
+      "description": "Redesign systems so people, tools, and spaces work together instead of against each other."
+    },
+    "build": {
+      "title": "Build",
+      "description": "Create what's missing. Custom tools, workflows, software—whatever the situation requires."
+    }
+  },
+  "approach": {
+    "title": "Our Approach",
+    "subtitle": "Adaptive. Hands-on. Results-driven.",
+    "steps": {
+      "assess": {
+        "title": "Assess",
+        "description": "We step in, observe, and break down what's happening—not what's supposed to happen."
+      },
+      "design": {
+        "title": "Design",
+        "description": "We architect solutions that fit the reality of your operation, not a generic template."
+      },
+      "build": {
+        "title": "Build",
+        "description": "We create what's missing—tools, systems, processes—tailored to your specific needs."
+      },
+      "implement": {
+        "title": "Implement",
+        "description": "We roll out, train, document, and make sure the system runs after we leave."
+      }
+    }
+  },
+  "about": {
+    "title": "About OL",
+    "p1": "OL is an operator-led optimization company built to bring order, clarity, and efficiency to situations that are messy, slow, or not working properly.",
+    "p2": "We become what the situation requires: analyst, builder, coordinator, designer, or operator. We don't deliver theory or surface-level polish—we focus on execution, durability, and long-term efficiency.",
+    "p3": "Form follows function. Things look right because they work right.",
+    "philosophy": "The goal is simple: once we step out, the system continues to run better."
+  },
+  "contact": {
+    "title": "Let's Talk",
+    "subtitle": "Ready to optimize? Tell us what you're working with.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "What's the situation?",
+      "submit": "Send Message"
+    }
+  },
+  "cta": {
+    "title": "Ready to optimize?",
+    "subtitle": "Let's turn your chaos into a system.",
+    "button": "Book a Call"
+  },
+  "footer": {
+    "tagline": "Turning chaos into systems.",
+    "rights": "All rights reserved."
+  }
+}

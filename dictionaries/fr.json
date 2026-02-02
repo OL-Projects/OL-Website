@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "OL | Optimisation & Logistique",
+    "description": "Optimisation propulsée par l'IA pour l'avenir. Nous transformons le chaos en systèmes qui fonctionnent mieux, avec moins de friction."
+  },
+  "nav": {
+    "home": "Accueil",
+    "approach": "Approche",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Transformer le chaos en systèmes.",
+    "subtitle": "Optimisation propulsée par l'IA pour l'avenir. Nous intervenons là où c'est brisé et le faisons fonctionner—plus vite, plus propre, plus intelligent.",
+    "cta": "Demander une évaluation"
+  },
+  "services": {
+    "title": "Ce que nous faisons",
+    "diagnose": {
+      "title": "Diagnostiquer",
+      "description": "Décomposer les problèmes aux principes fondamentaux. Identifier ce qui cause réellement la friction."
+    },
+    "design": {
+      "title": "Concevoir",
+      "description": "Reconcevoir les systèmes pour que les gens, les outils et les espaces travaillent ensemble."
+    },
+    "build": {
+      "title": "Construire",
+      "description": "Créer ce qui manque. Outils personnalisés, flux de travail, logiciels—tout ce que la situation exige."
+    }
+  },
+  "approach": {
+    "title": "Notre Approche",
+    "subtitle": "Adaptative. Pratique. Axée sur les résultats.",
+    "steps": {
+      "assess": {
+        "title": "Évaluer",
+        "description": "Nous intervenons, observons et analysons ce qui se passe—pas ce qui est censé se passer."
+      },
+      "design": {
+        "title": "Concevoir",
+        "description": "Nous architecturons des solutions adaptées à la réalité de votre opération."
+      },
+      "build": {
+        "title": "Construire",
+        "description": "Nous créons ce qui manque—outils, systèmes, processus—adaptés à vos besoins."
+      },
+      "implement": {
+        "title": "Implémenter",
+        "description": "Nous déployons, formons, documentons et assurons que le système fonctionne après notre départ."
+      }
+    }
+  },
+  "about": {
+    "title": "À propos d'OL",
+    "p1": "OL est une entreprise d'optimisation dirigée par des opérateurs, construite pour apporter ordre, clarté et efficacité aux situations désordonnées ou dysfonctionnelles.",
+    "p2": "Nous devenons ce que la situation exige : analyste, constructeur, coordinateur, concepteur ou opérateur. Nous ne livrons pas de théorie—nous nous concentrons sur l'exécution et l'efficacité à long terme.",
+    "p3": "La forme suit la fonction. Les choses paraissent bien parce qu'elles fonctionnent bien.",
+    "philosophy": "L'objectif est simple : une fois que nous partons, le système continue de mieux fonctionner."
+  },
+  "contact": {
+    "title": "Parlons-en",
+    "subtitle": "Prêt à optimiser? Dites-nous sur quoi vous travaillez.",
+    "form": {
+      "name": "Nom",
+      "email": "Courriel",
+      "message": "Quelle est la situation?",
+      "submit": "Envoyer le message"
+    }
+  },
+  "cta": {
+    "title": "Prêt à optimiser?",
+    "subtitle": "Transformons votre chaos en système.",
+    "button": "Réserver un appel"
+  },
+  "footer": {
+    "tagline": "Transformer le chaos en systèmes.",
+    "rights": "Tous droits réservés."
+  }
+}
