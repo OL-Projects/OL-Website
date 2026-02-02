@@ -6,6 +6,10 @@
   "nav": {
     "home": "Home",
     "approach": "Approach",
+    "apps": "Apps",
+    "resources": "Resources",
+    "database": "Database",
+    "search": "Search",
     "about": "About",
     "contact": "Contact"
   },
@@ -51,6 +55,44 @@
       }
     }
   },
+  "apps": {
+    "title": "Our Apps",
+    "subtitle": "Custom-built tools designed to solve real problems.",
+    "comingSoon": "Coming Soon",
+    "viewApp": "View App",
+    "download": "Download"
+  },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Guides, templates, and tools to help you optimize.",
+    "categories": {
+      "guides": "Guides",
+      "templates": "Templates",
+      "tools": "Tools"
+    },
+    "download": "Download",
+    "readMore": "Read More"
+  },
+  "database": {
+    "title": "Knowledge Base",
+    "subtitle": "A curated collection of insights, data, and useful information.",
+    "search": "Search the database...",
+    "categories": {
+      "all": "All",
+      "optimization": "Optimization",
+      "logistics": "Logistics",
+      "tools": "Tools",
+      "processes": "Processes"
+    }
+  },
+  "search": {
+    "title": "Search",
+    "subtitle": "Find pages, services, resources, and more.",
+    "placeholder": "Search...",
+    "noResults": "No results found",
+    "hint": "Start typing to search pages, services, and resources...",
+    "quickLinks": "Quick Links"
+  },
   "about": {
     "title": "About OL",
     "p1": "OL is an operator-led optimization company built to bring order, clarity, and efficiency to situations that are messy, slow, or not working properly.",
@@ -72,6 +114,17 @@
     "title": "Ready to optimize?",
     "subtitle": "Let's turn your chaos into a system.",
     "button": "Book a Call"
+  },
+  "chat": {
+    "title": "OL Assistant",
+    "status": "Online • Ready to help",
+    "welcome": "Hi! I'm the OL assistant. How can I help you optimize today?",
+    "inputPlaceholder": "Type a message...",
+    "responses": [
+      "I understand you're looking to optimize. Could you tell me more about your specific challenges?",
+      "That's a great question! Our approach typically starts with a thorough assessment of your current operations.",
+      "Based on what you've described, I'd recommend booking a call with our team to discuss a customized solution."
+    ]
   },
   "footer": {
     "tagline": "Turning chaos into systems.",

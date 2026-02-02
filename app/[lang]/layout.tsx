@@ -4,6 +4,7 @@ import '../globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
+import { ChatWidget } from '@/components/chat/chat-widget'
 import { getDictionary } from '@/lib/dictionary'
 import { i18n, type Locale } from '@/i18n-config'
 
@@ -57,7 +58,7 @@ export default async function RootLayout({
   const dict = await getDictionary(lang)
 
   return (
-    <html lang={lang} className="dark" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
           <Header dict={dict} lang={lang} />
@@ -65,6 +66,7 @@ export default async function RootLayout({
             {children}
           </main>
           <Footer dict={dict} />
+          <ChatWidget dict={dict} />
         </ThemeProvider>
       </body>
     </html>

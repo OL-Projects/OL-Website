@@ -30,7 +30,7 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10"
+            className="text-lg md:text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto mb-10"
           >
             {dict.hero.subtitle}
           </motion.p>
@@ -42,7 +42,7 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
           >
             <Link
               href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:scale-105 transition-transform glow"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-medium hover:scale-105 transition-transform shadow-lg"
             >
               {dict.hero.cta}
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,9 +63,9 @@ export function HeroSection({ dict, lang }: HeroSectionProps) {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
         >
-          <motion.div className="w-1.5 h-3 bg-gray-400 rounded-full mt-2" />
+          <motion.div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2" />
         </motion.div>
       </motion.div>
     </section>

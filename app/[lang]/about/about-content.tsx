@@ -9,13 +9,13 @@ interface AboutContentProps {
 
 export function AboutContent({ dict }: AboutContentProps) {
   return (
-    <section className="py-32">
+    <section className="py-32 bg-gray-50 dark:bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
         <FadeIn>
-          <h1 className="text-4xl md:text-6xl font-bold mb-12">{dict.about.title}</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-12 text-gray-900 dark:text-white">{dict.about.title}</h1>
         </FadeIn>
 
-        <div className="space-y-8 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+        <div className="space-y-8 text-lg text-gray-700 dark:text-gray-400 leading-relaxed">
           <FadeIn delay={0.1}>
             <p>{dict.about.p1}</p>
           </FadeIn>
@@ -25,14 +25,14 @@ export function AboutContent({ dict }: AboutContentProps) {
           </FadeIn>
           
           <FadeIn delay={0.3}>
-            <p className="text-black dark:text-white font-medium italic">
+            <p className="text-gray-900 dark:text-white font-medium italic">
               &ldquo;{dict.about.p3}&rdquo;
             </p>
           </FadeIn>
           
           <FadeIn delay={0.4}>
-            <div className="pt-8 border-t border-white/10">
-              <p className="text-xl text-black dark:text-white">{dict.about.philosophy}</p>
+            <div className="pt-8 border-t border-gray-200 dark:border-white/10">
+              <p className="text-xl text-gray-900 dark:text-white">{dict.about.philosophy}</p>
             </div>
           </FadeIn>
         </div>

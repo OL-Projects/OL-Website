@@ -38,7 +38,7 @@ export function ServicesSection({ dict }: ServicesSectionProps) {
     <section className="py-32 bg-gray-50 dark:bg-[#050505]">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
             {dict.services.title}
           </h2>
         </FadeIn>
@@ -49,12 +49,12 @@ export function ServicesSection({ dict }: ServicesSectionProps) {
               <motion.div
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-colors h-full"
+                className="p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-colors h-full shadow-sm dark:shadow-none"
               >
-                <div className="w-14 h-14 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{service.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{service.description}</p>
               </motion.div>
             </StaggerItem>

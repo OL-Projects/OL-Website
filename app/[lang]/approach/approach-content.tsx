@@ -24,12 +24,12 @@ export function ApproachContent({ dict }: ApproachContentProps) {
   ]
 
   return (
-    <section className="py-32">
+    <section className="py-32 bg-gray-50 dark:bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         <FadeIn>
           <div className="text-center mb-20">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">{dict.approach.title}</h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400">{dict.approach.subtitle}</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">{dict.approach.title}</h1>
+            <p className="text-xl text-gray-700 dark:text-gray-400">{dict.approach.subtitle}</p>
           </div>
         </FadeIn>
 
@@ -49,12 +49,12 @@ export function ApproachContent({ dict }: ApproachContentProps) {
                   <div className="flex-1 text-center md:text-left">
                     <div className="inline-flex items-center gap-4 mb-4">
                       <span className="text-5xl font-bold text-blue-500/20">0{index + 1}</span>
-                      <h3 className="text-2xl font-semibold">{step.title}</h3>
+                      <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">{step.title}</h3>
                     </div>
-                    <p className="text-gray-600 dark:text-gray-400 max-w-md">{step.description}</p>
+                    <p className="text-gray-700 dark:text-gray-400 max-w-md">{step.description}</p>
                   </div>
                   
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-white/10 flex items-center justify-center text-blue-500 relative z-10">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-gray-200 dark:border-white/10 flex items-center justify-center text-blue-600 dark:text-blue-400 relative z-10">
                     {step.icon}
                   </div>
                   

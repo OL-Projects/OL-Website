@@ -6,6 +6,10 @@
   "nav": {
     "home": "Accueil",
     "approach": "Approche",
+    "apps": "Applications",
+    "resources": "Ressources",
+    "database": "Base de données",
+    "search": "Recherche",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -51,6 +55,44 @@
       }
     }
   },
+  "apps": {
+    "title": "Nos Applications",
+    "subtitle": "Outils sur mesure conçus pour résoudre de vrais problèmes.",
+    "comingSoon": "Bientôt disponible",
+    "viewApp": "Voir l'application",
+    "download": "Télécharger"
+  },
+  "resources": {
+    "title": "Ressources",
+    "subtitle": "Guides, modèles et outils pour vous aider à optimiser.",
+    "categories": {
+      "guides": "Guides",
+      "templates": "Modèles",
+      "tools": "Outils"
+    },
+    "download": "Télécharger",
+    "readMore": "En savoir plus"
+  },
+  "database": {
+    "title": "Base de connaissances",
+    "subtitle": "Une collection organisée d'informations, de données et de ressources utiles.",
+    "search": "Rechercher dans la base de données...",
+    "categories": {
+      "all": "Tout",
+      "optimization": "Optimisation",
+      "logistics": "Logistique",
+      "tools": "Outils",
+      "processes": "Processus"
+    }
+  },
+  "search": {
+    "title": "Recherche",
+    "subtitle": "Trouvez des pages, services, ressources et plus encore.",
+    "placeholder": "Rechercher...",
+    "noResults": "Aucun résultat trouvé",
+    "hint": "Commencez à taper pour rechercher des pages, services et ressources...",
+    "quickLinks": "Liens rapides"
+  },
   "about": {
     "title": "À propos d'OL",
     "p1": "OL est une entreprise d'optimisation dirigée par des opérateurs, construite pour apporter ordre, clarté et efficacité aux situations désordonnées ou dysfonctionnelles.",
@@ -72,6 +114,17 @@
     "title": "Prêt à optimiser?",
     "subtitle": "Transformons votre chaos en système.",
     "button": "Réserver un appel"
+  },
+  "chat": {
+    "title": "Assistant OL",
+    "status": "En ligne • Prêt à aider",
+    "welcome": "Bonjour! Je suis l'assistant OL. Comment puis-je vous aider à optimiser aujourd'hui?",
+    "inputPlaceholder": "Écrivez un message...",
+    "responses": [
+      "Je comprends que vous cherchez à optimiser. Pouvez-vous m'en dire plus sur vos défis spécifiques?",
+      "Excellente question! Notre approche commence généralement par une évaluation approfondie de vos opérations actuelles.",
+      "D'après ce que vous avez décrit, je vous recommande de réserver un appel avec notre équipe pour discuter d'une solution personnalisée."
+    ]
   },
   "footer": {
     "tagline": "Transformer le chaos en systèmes.",
