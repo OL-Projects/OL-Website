@@ -11,7 +11,7 @@ interface FadeInProps {
 }
 
 // Optimized easing curve for smooth, natural motion
-const smoothEase = [0.25, 0.1, 0.25, 1]
+const smoothEase: [number, number, number, number] = [0.25, 0.1, 0.25, 1]
 
 export function FadeIn({ children, delay = 0, direction = 'up', className = '' }: FadeInProps) {
   // Reduced distances for subtler, faster animations
