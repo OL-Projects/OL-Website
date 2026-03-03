@@ -1,130 +1,171 @@
 {
   "meta": {
-    "title": "OL | Optimisation & Logistique",
-    "description": "Optimisation propulsée par l'IA pour l'avenir. Nous transformons le chaos en systèmes qui fonctionnent mieux, avec moins de friction."
+    "title": "OL | Technologie & Innovation",
+    "description": "OL est une entreprise technologique qui conçoit, développe et déploie des logiciels intelligents — applications, plateformes et systèmes d'IA qui optimisent le fonctionnement des entreprises."
   },
   "nav": {
     "home": "Accueil",
-    "approach": "Approche",
-    "apps": "Applications",
-    "resources": "Ressources",
-    "database": "Base de données",
-    "search": "Recherche",
+    "solutions": "Solutions",
+    "products": "Produits",
     "about": "À propos",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Transformer le chaos en systèmes.",
-    "subtitle": "Optimisation propulsée par l'IA pour l'avenir. Nous intervenons là où c'est brisé et le faisons fonctionner—plus vite, plus propre, plus intelligent.",
-    "cta": "Demander une évaluation"
+    "title": "Façonner l'avenir des entreprises.",
+    "subtitle": "Nous concevons, développons et déployons des logiciels intelligents — applications, plateformes et systèmes d'IA qui optimisent le fonctionnement des organisations.",
+    "cta": "Explorer les solutions",
+    "ctaSecondary": "Voir les produits"
   },
-  "services": {
-    "title": "Ce que nous faisons",
-    "diagnose": {
-      "title": "Diagnostiquer",
-      "description": "Décomposer les problèmes aux principes fondamentaux. Identifier ce qui cause réellement la friction."
+  "capabilities": {
+    "title": "Ce que nous construisons",
+    "subtitle": "Des solutions technologiques complètes pour les organisations modernes.",
+    "apps": {
+      "title": "Applications",
+      "description": "Applications mobiles natives iOS, Android et multiplateformes, conçues pour la performance, l'accessibilité et la mise à l'échelle."
     },
-    "design": {
-      "title": "Concevoir",
-      "description": "Reconcevoir les systèmes pour que les gens, les outils et les espaces travaillent ensemble."
+    "software": {
+      "title": "Génie logiciel",
+      "description": "Plateformes personnalisées, outils d'entreprise et systèmes conçus pour résoudre des défis opérationnels complexes."
     },
-    "build": {
-      "title": "Construire",
-      "description": "Créer ce qui manque. Outils personnalisés, flux de travail, logiciels—tout ce que la situation exige."
+    "web": {
+      "title": "Développement Web",
+      "description": "Applications web modernes, sites progressifs et plateformes numériques construits avec des cadres et standards de pointe."
+    },
+    "ai": {
+      "title": "IA & Automatisation",
+      "description": "Flux de travail intelligents alimentés par des LLM de premier plan — Anthropic, OpenAI et Google — intégrés à vos opérations."
     }
   },
-  "approach": {
-    "title": "Notre Approche",
-    "subtitle": "Adaptative. Pratique. Axée sur les résultats.",
-    "steps": {
-      "assess": {
-        "title": "Évaluer",
-        "description": "Nous intervenons, observons et analysons ce qui se passe—pas ce qui est censé se passer."
-      },
-      "design": {
-        "title": "Concevoir",
-        "description": "Nous architecturons des solutions adaptées à la réalité de votre opération."
-      },
-      "build": {
-        "title": "Construire",
-        "description": "Nous créons ce qui manque—outils, systèmes, processus—adaptés à vos besoins."
-      },
-      "implement": {
-        "title": "Implémenter",
-        "description": "Nous déployons, formons, documentons et assurons que le système fonctionne après notre départ."
-      }
-    }
+  "technology": {
+    "title": "Propulsé par des technologies de pointe",
+    "items": ["Swift", "React", "Next.js", "Firebase", "Anthropic", "OpenAI", "Apple MapKit", "ARKit", "Node.js", "TypeScript"]
   },
-  "apps": {
-    "title": "Nos Applications",
-    "subtitle": "Outils sur mesure conçus pour résoudre de vrais problèmes.",
-    "comingSoon": "Bientôt disponible",
-    "viewApp": "Voir l'application",
-    "download": "Télécharger"
+  "featured": {
+    "label": "Produit vedette",
+    "title": "OL — Plateforme de gestion d'entreprise",
+    "description": "Planification d'itinéraires, gestion de clients, assistance propulsée par l'IA et opérations de livraison — unifiés dans une seule application intelligente.",
+    "cta": "En savoir plus"
   },
-  "resources": {
-    "title": "Ressources",
-    "subtitle": "Guides, modèles et outils pour vous aider à optimiser.",
-    "categories": {
-      "guides": "Guides",
-      "templates": "Modèles",
-      "tools": "Outils"
+  "principles": {
+    "title": "Nos principes",
+    "privacy": {
+      "title": "Confidentialité intégrée",
+      "description": "Aucun suivi. Aucune publicité. Aucune vente de données. Vos informations restent sous votre contrôle, toujours."
     },
-    "download": "Télécharger",
-    "readMore": "En savoir plus"
-  },
-  "database": {
-    "title": "Base de connaissances",
-    "subtitle": "Une collection organisée d'informations, de données et de ressources utiles.",
-    "search": "Rechercher dans la base de données...",
-    "categories": {
-      "all": "Tout",
-      "optimization": "Optimisation",
-      "logistics": "Logistique",
-      "tools": "Outils",
-      "processes": "Processus"
-    }
-  },
-  "search": {
-    "title": "Recherche",
-    "subtitle": "Trouvez des pages, services, ressources et plus encore.",
-    "placeholder": "Rechercher...",
-    "noResults": "Aucun résultat trouvé",
-    "hint": "Commencez à taper pour rechercher des pages, services et ressources...",
-    "quickLinks": "Liens rapides"
-  },
-  "about": {
-    "title": "À propos d'OL",
-    "p1": "OL est une entreprise d'optimisation dirigée par des opérateurs, construite pour apporter ordre, clarté et efficacité aux situations désordonnées ou dysfonctionnelles.",
-    "p2": "Nous devenons ce que la situation exige : analyste, constructeur, coordinateur, concepteur ou opérateur. Nous ne livrons pas de théorie—nous nous concentrons sur l'exécution et l'efficacité à long terme.",
-    "p3": "La forme suit la fonction. Les choses paraissent bien parce qu'elles fonctionnent bien.",
-    "philosophy": "L'objectif est simple : une fois que nous partons, le système continue de mieux fonctionner."
-  },
-  "contact": {
-    "title": "Parlons-en",
-    "subtitle": "Prêt à optimiser? Dites-nous sur quoi vous travaillez.",
-    "form": {
-      "name": "Nom",
-      "email": "Courriel",
-      "message": "Quelle est la situation?",
-      "submit": "Envoyer le message"
+    "performance": {
+      "title": "Performance d'abord",
+      "description": "Chaque système que nous construisons est conçu pour la vitesse, la fiabilité et l'efficacité à toute échelle."
+    },
+    "canadian": {
+      "title": "Conçu au Canada",
+      "description": "Conçu, développé et exploité au Canada. Soutenir les entreprises canadiennes avec une technologie de classe mondiale."
     }
   },
   "cta": {
-    "title": "Prêt à optimiser?",
-    "subtitle": "Transformons votre chaos en système.",
-    "button": "Réserver un appel"
+    "title": "Prêt à moderniser vos opérations?",
+    "subtitle": "Contactez notre équipe pour discuter de comment OL peut optimiser votre entreprise.",
+    "button": "Nous contacter"
   },
-  "chat": {
-    "title": "Assistant OL",
-    "status": "En ligne • Prêt à aider",
-    "welcome": "Bonjour! Je suis l'assistant OL. Comment puis-je vous aider à optimiser aujourd'hui?",
-    "inputPlaceholder": "Écrivez un message...",
-    "responses": [
-      "Je comprends que vous cherchez à optimiser. Pouvez-vous m'en dire plus sur vos défis spécifiques?",
-      "Excellente question! Notre approche commence généralement par une évaluation approfondie de vos opérations actuelles.",
-      "D'après ce que vous avez décrit, je vous recommande de réserver un appel avec notre équipe pour discuter d'une solution personnalisée."
-    ]
+  "solutions": {
+    "title": "Solutions",
+    "subtitle": "Des services technologiques complets conçus pour transformer le fonctionnement de votre organisation.",
+    "apps": {
+      "title": "Développement d'applications",
+      "description": "Nous construisons des applications mobiles natives et multiplateformes offrant des expériences utilisateur exceptionnelles. De l'iOS avec Swift et SwiftUI à Android et aux solutions multiplateformes, nos applications sont conçues pour la performance, l'accessibilité et la maintenabilité à long terme.",
+      "capabilities": ["Développement iOS & Android", "Solutions multiplateformes", "Optimisation App Store", "Conformité d'accessibilité", "Ingénierie de performance", "Maintenance & support continu"]
+    },
+    "software": {
+      "title": "Génie logiciel",
+      "description": "Plateformes logicielles personnalisées et outils d'entreprise conçus pour résoudre vos défis opérationnels les plus complexes. Nous architecturons des systèmes qui évoluent avec votre entreprise et s'intègrent parfaitement à votre infrastructure existante.",
+      "capabilities": ["Plateformes d'entreprise", "Automatisation des processus", "Architecture de bases de données", "Développement & intégration d'API", "Infrastructure cloud", "Sécurité & conformité"]
+    },
+    "web": {
+      "title": "Développement Web",
+      "description": "Applications web modernes, rapides et accessibles construites avec des cadres de pointe. Des sites corporatifs aux plateformes web complexes, nous livrons des expériences numériques performantes.",
+      "capabilities": ["Applications Next.js & React", "Applications web progressives", "Plateformes de commerce électronique", "Systèmes de gestion de contenu", "Optimisation SEO & performance", "Support bilingue & multilingue"]
+    },
+    "ai": {
+      "title": "IA & Automatisation",
+      "description": "Systèmes intelligents alimentés par les modèles de langage les plus avancés au monde. Nous intégrons l'IA dans vos flux de travail pour automatiser les processus, générer des insights et accélérer la prise de décision.",
+      "capabilities": ["Intégration LLM (Anthropic, OpenAI, Google)", "Automatisation des flux de travail", "Traitement du langage naturel", "Vision par ordinateur & ARKit", "Analytique prédictive", "IA vocale & conversationnelle"]
+    }
+  },
+  "products": {
+    "title": "Produits",
+    "subtitle": "Technologie construite par OL. Outils intelligents conçus pour les opérations réelles.",
+    "ol": {
+      "title": "OL",
+      "tagline": "Plateforme de gestion d'entreprise",
+      "description": "Une application iOS complète pour les opérations de livraison et de logistique. Planification d'itinéraires, gestion de clients, assistance propulsée par l'IA, gestion de tâches, communication d'équipe et suivi financier — le tout dans une plateforme unifiée.",
+      "status": "En ligne",
+      "platform": "iOS",
+      "price": "Gratuit",
+      "features": ["Assistant IA (Multi-fournisseur)", "Planification d'itinéraires & navigation", "Gestion de clients (CRM)", "Suivi des livraisons", "Gestion des tâches", "Communication d'équipe", "Suivi financier", "Moteur de documents", "Intégration Siri & Raccourcis"]
+    },
+    "comingSoon": {
+      "title": "Plus de produits",
+      "description": "De nouvelles applications et plateformes sont actuellement en développement. Restez connecté pour les annonces.",
+      "status": "En développement"
+    }
+  },
+  "about": {
+    "title": "À propos d'OL",
+    "subtitle": "Entreprise technologique. Conçue au Canada.",
+    "mission": {
+      "title": "Notre mission",
+      "description": "OL existe pour construire une technologie qui fait mieux fonctionner les entreprises. Nous combinons l'expertise en génie logiciel avec l'intelligence artificielle pour créer des outils puissants, privés et accessibles."
+    },
+    "team": {
+      "title": "Notre équipe",
+      "description": "OL est propulsé par des équipes de développeurs, programmeurs et ingénieurs logiciels qui partagent un engagement envers la construction d'une technologie exceptionnelle. Nous exploitons des systèmes d'IA de premier plan — incluant Claude d'Anthropic — pour accélérer notre développement et livrer des solutions intelligentes."
+    },
+    "values": {
+      "title": "Ce que nous défendons",
+      "items": [
+        {
+          "title": "Confidentialité d'abord",
+          "description": "Nous croyons que la technologie devrait servir ses utilisateurs, pas les exploiter. Chaque produit que nous construisons est conçu avec la confidentialité comme fondation."
+        },
+        {
+          "title": "Excellence en ingénierie",
+          "description": "Nous nous tenons aux plus hauts standards de l'artisanat logiciel. Architecture propre, tests rigoureux et attention méticuleuse aux détails définissent notre travail."
+        },
+        {
+          "title": "Accessibilité",
+          "description": "La technologie devrait être accessible à tous. Nous concevons pour l'inclusivité, en nous assurant que nos produits fonctionnent pour tous les utilisateurs."
+        },
+        {
+          "title": "Transparence",
+          "description": "Nous opérons avec clarté et honnêteté. Notre tarification est équitable, nos politiques sont simples et notre code parle de lui-même."
+        }
+      ]
+    },
+    "tech": {
+      "title": "Notre technologie",
+      "description": "Nous travaillons avec les outils et cadres les plus avancés disponibles — de Swift et SwiftUI pour le développement iOS natif à React et Next.js pour les plateformes web, propulsés par l'IA d'Anthropic, OpenAI et Google."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Demandes commerciales, support et opportunités de partenariat.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse courriel",
+      "type": "Type de demande",
+      "types": {
+        "general": "Demande générale",
+        "business": "Partenariat commercial",
+        "support": "Support produit",
+        "careers": "Carrières"
+      },
+      "message": "Comment pouvons-nous vous aider?",
+      "submit": "Envoyer le message"
+    },
+    "direct": {
+      "title": "Contact direct",
+      "email": "admin@olpro.ca",
+      "location": "Canada"
+    }
   },
   "privacy": {
     "title": "Politique de confidentialité",
@@ -139,9 +180,10 @@
     "backToHome": "Retour à l'accueil"
   },
   "footer": {
-    "tagline": "Transformer le chaos en systèmes.",
+    "tagline": "La technologie qui optimise les entreprises.",
     "rights": "Tous droits réservés.",
     "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation"
+    "terms": "Conditions d'utilisation",
+    "contact": "Contact"
   }
 }

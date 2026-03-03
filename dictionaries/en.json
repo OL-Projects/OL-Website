@@ -1,130 +1,171 @@
 {
   "meta": {
-    "title": "OL | Optimization & Logistics",
-    "description": "AI-driven optimization for the future. We turn chaos into systems that run better, with less friction, and more control."
+    "title": "OL | Technology & Innovation",
+    "description": "OL is a technology company that designs, builds, and deploys intelligent software — apps, platforms, and AI systems that optimize how businesses operate."
   },
   "nav": {
     "home": "Home",
-    "approach": "Approach",
-    "apps": "Apps",
-    "resources": "Resources",
-    "database": "Database",
-    "search": "Search",
+    "solutions": "Solutions",
+    "products": "Products",
     "about": "About",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Turn chaos into systems.",
-    "subtitle": "AI-driven optimization for the future. We step into what's broken and make it work—faster, cleaner, smarter.",
-    "cta": "Request Assessment"
+    "title": "Engineering the future of business.",
+    "subtitle": "We design, build, and deploy intelligent software — applications, platforms, and AI systems that optimize how organizations operate.",
+    "cta": "Explore Solutions",
+    "ctaSecondary": "View Products"
   },
-  "services": {
-    "title": "What We Do",
-    "diagnose": {
-      "title": "Diagnose",
-      "description": "Break problems down to first principles. Identify what's actually causing friction."
+  "capabilities": {
+    "title": "What We Build",
+    "subtitle": "End-to-end technology solutions for modern organizations.",
+    "apps": {
+      "title": "Applications",
+      "description": "Native iOS, Android, and cross-platform mobile applications built for performance, accessibility, and scale."
     },
-    "design": {
-      "title": "Design",
-      "description": "Redesign systems so people, tools, and spaces work together instead of against each other."
+    "software": {
+      "title": "Software Engineering",
+      "description": "Custom platforms, enterprise tools, and business systems engineered to solve complex operational challenges."
     },
-    "build": {
-      "title": "Build",
-      "description": "Create what's missing. Custom tools, workflows, software—whatever the situation requires."
+    "web": {
+      "title": "Web Development",
+      "description": "Modern web applications, progressive sites, and digital platforms built with cutting-edge frameworks and standards."
+    },
+    "ai": {
+      "title": "AI & Automation",
+      "description": "Intelligent workflows powered by industry-leading LLMs — Anthropic, OpenAI, and Google — integrated into your operations."
     }
   },
-  "approach": {
-    "title": "Our Approach",
-    "subtitle": "Adaptive. Hands-on. Results-driven.",
-    "steps": {
-      "assess": {
-        "title": "Assess",
-        "description": "We step in, observe, and break down what's happening—not what's supposed to happen."
-      },
-      "design": {
-        "title": "Design",
-        "description": "We architect solutions that fit the reality of your operation, not a generic template."
-      },
-      "build": {
-        "title": "Build",
-        "description": "We create what's missing—tools, systems, processes—tailored to your specific needs."
-      },
-      "implement": {
-        "title": "Implement",
-        "description": "We roll out, train, document, and make sure the system runs after we leave."
-      }
-    }
+  "technology": {
+    "title": "Powered by industry-leading technology",
+    "items": ["Swift", "React", "Next.js", "Firebase", "Anthropic", "OpenAI", "Apple MapKit", "ARKit", "Node.js", "TypeScript"]
   },
-  "apps": {
-    "title": "Our Apps",
-    "subtitle": "Custom-built tools designed to solve real problems.",
-    "comingSoon": "Coming Soon",
-    "viewApp": "View App",
-    "download": "Download"
+  "featured": {
+    "label": "Featured Product",
+    "title": "OL — Business Management Platform",
+    "description": "Route planning, client management, AI-powered assistance, and delivery operations — unified in one intelligent application.",
+    "cta": "Learn More"
   },
-  "resources": {
-    "title": "Resources",
-    "subtitle": "Guides, templates, and tools to help you optimize.",
-    "categories": {
-      "guides": "Guides",
-      "templates": "Templates",
-      "tools": "Tools"
+  "principles": {
+    "title": "Our Principles",
+    "privacy": {
+      "title": "Privacy by Design",
+      "description": "No tracking. No advertising. No data selling. Your information remains under your control, always."
     },
-    "download": "Download",
-    "readMore": "Read More"
-  },
-  "database": {
-    "title": "Knowledge Base",
-    "subtitle": "A curated collection of insights, data, and useful information.",
-    "search": "Search the database...",
-    "categories": {
-      "all": "All",
-      "optimization": "Optimization",
-      "logistics": "Logistics",
-      "tools": "Tools",
-      "processes": "Processes"
-    }
-  },
-  "search": {
-    "title": "Search",
-    "subtitle": "Find pages, services, resources, and more.",
-    "placeholder": "Search...",
-    "noResults": "No results found",
-    "hint": "Start typing to search pages, services, and resources...",
-    "quickLinks": "Quick Links"
-  },
-  "about": {
-    "title": "About OL",
-    "p1": "OL is an operator-led optimization company built to bring order, clarity, and efficiency to situations that are messy, slow, or not working properly.",
-    "p2": "We become what the situation requires: analyst, builder, coordinator, designer, or operator. We don't deliver theory or surface-level polish—we focus on execution, durability, and long-term efficiency.",
-    "p3": "Form follows function. Things look right because they work right.",
-    "philosophy": "The goal is simple: once we step out, the system continues to run better."
-  },
-  "contact": {
-    "title": "Let's Talk",
-    "subtitle": "Ready to optimize? Tell us what you're working with.",
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "message": "What's the situation?",
-      "submit": "Send Message"
+    "performance": {
+      "title": "Performance First",
+      "description": "Every system we build is engineered for speed, reliability, and efficiency at any scale."
+    },
+    "canadian": {
+      "title": "Canadian Built",
+      "description": "Designed, engineered, and operated in Canada. Supporting Canadian businesses with world-class technology."
     }
   },
   "cta": {
-    "title": "Ready to optimize?",
-    "subtitle": "Let's turn your chaos into a system.",
-    "button": "Book a Call"
+    "title": "Ready to modernize your operations?",
+    "subtitle": "Connect with our team to discuss how OL can optimize your business.",
+    "button": "Contact Us"
   },
-  "chat": {
-    "title": "OL Assistant",
-    "status": "Online • Ready to help",
-    "welcome": "Hi! I'm the OL assistant. How can I help you optimize today?",
-    "inputPlaceholder": "Type a message...",
-    "responses": [
-      "I understand you're looking to optimize. Could you tell me more about your specific challenges?",
-      "That's a great question! Our approach typically starts with a thorough assessment of your current operations.",
-      "Based on what you've described, I'd recommend booking a call with our team to discuss a customized solution."
-    ]
+  "solutions": {
+    "title": "Solutions",
+    "subtitle": "Comprehensive technology services designed to transform how your organization operates.",
+    "apps": {
+      "title": "Application Development",
+      "description": "We build native and cross-platform mobile applications that deliver exceptional user experiences. From iOS with Swift and SwiftUI to Android and cross-platform solutions, our applications are built for performance, accessibility, and long-term maintainability.",
+      "capabilities": ["iOS & Android Development", "Cross-Platform Solutions", "App Store Optimization", "Accessibility Compliance", "Performance Engineering", "Ongoing Maintenance & Support"]
+    },
+    "software": {
+      "title": "Software Engineering",
+      "description": "Custom software platforms and enterprise tools built to solve your most complex operational challenges. We architect systems that scale with your business and integrate seamlessly with your existing infrastructure.",
+      "capabilities": ["Enterprise Platforms", "Business Process Automation", "Database Architecture", "API Development & Integration", "Cloud Infrastructure", "Security & Compliance"]
+    },
+    "web": {
+      "title": "Web Development",
+      "description": "Modern, fast, and accessible web applications built with industry-leading frameworks. From corporate websites to complex web platforms, we deliver digital experiences that perform.",
+      "capabilities": ["Next.js & React Applications", "Progressive Web Apps", "E-Commerce Platforms", "Content Management Systems", "SEO & Performance Optimization", "Bilingual & Multilingual Support"]
+    },
+    "ai": {
+      "title": "AI & Automation",
+      "description": "Intelligent systems powered by the world's most advanced language models. We integrate AI into your workflows to automate processes, generate insights, and accelerate decision-making.",
+      "capabilities": ["LLM Integration (Anthropic, OpenAI, Google)", "Workflow Automation", "Natural Language Processing", "Computer Vision & ARKit", "Predictive Analytics", "Voice & Conversational AI"]
+    }
+  },
+  "products": {
+    "title": "Products",
+    "subtitle": "Technology built by OL. Intelligent tools designed for real-world operations.",
+    "ol": {
+      "title": "OL",
+      "tagline": "Business Management Platform",
+      "description": "A comprehensive iOS application for delivery and logistics operations. Route planning, client management, AI-powered assistance, task management, team communication, and financial tracking — all in one unified platform.",
+      "status": "Live",
+      "platform": "iOS",
+      "price": "Free",
+      "features": ["AI Assistant (Multi-Provider)", "Route Planning & Navigation", "Client Management (CRM)", "Delivery Tracking", "Task Management", "Team Communication", "Financial Tracking", "Document Engine", "Siri & Shortcuts Integration"]
+    },
+    "comingSoon": {
+      "title": "More Products",
+      "description": "New applications and platforms are currently in development. Stay connected for announcements.",
+      "status": "In Development"
+    }
+  },
+  "about": {
+    "title": "About OL",
+    "subtitle": "Technology company. Canadian built.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "OL exists to build technology that makes businesses operate better. We combine software engineering expertise with artificial intelligence to create tools that are powerful, private, and accessible."
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "OL is powered by teams of developers, programmers, and software engineers who share a commitment to building exceptional technology. We leverage flagship AI systems — including Anthropic's Claude — to accelerate our development and deliver intelligent solutions."
+    },
+    "values": {
+      "title": "What We Stand For",
+      "items": [
+        {
+          "title": "Privacy First",
+          "description": "We believe technology should serve its users, not exploit them. Every product we build is designed with privacy as a foundation — no tracking, no advertising, no data selling."
+        },
+        {
+          "title": "Engineering Excellence",
+          "description": "We hold ourselves to the highest standards of software craftsmanship. Clean architecture, thorough testing, and meticulous attention to detail define our work."
+        },
+        {
+          "title": "Accessibility",
+          "description": "Technology should be available to everyone. We design for inclusivity, ensuring our products work for all users regardless of ability."
+        },
+        {
+          "title": "Transparency",
+          "description": "We operate with clarity and honesty. Our pricing is fair, our policies are straightforward, and our code speaks for itself."
+        }
+      ]
+    },
+    "tech": {
+      "title": "Our Technology",
+      "description": "We work with the most advanced tools and frameworks available — from Swift and SwiftUI for native iOS development to React and Next.js for web platforms, powered by AI from Anthropic, OpenAI, and Google."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Business inquiries, support, and partnership opportunities.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "type": "Inquiry Type",
+      "types": {
+        "general": "General Inquiry",
+        "business": "Business Partnership",
+        "support": "Product Support",
+        "careers": "Careers"
+      },
+      "message": "How can we help?",
+      "submit": "Send Message"
+    },
+    "direct": {
+      "title": "Direct Contact",
+      "email": "admin@olpro.ca",
+      "location": "Canada"
+    }
   },
   "privacy": {
     "title": "Privacy Policy",
@@ -139,9 +180,10 @@
     "backToHome": "Back to Home"
   },
   "footer": {
-    "tagline": "Turning chaos into systems.",
+    "tagline": "Technology that optimizes business.",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "contact": "Contact"
   }
 }
