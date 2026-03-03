@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { IconCheck } from '@/components/icons'
 
 interface ProductsContentProps {
   lang: string
@@ -26,11 +27,13 @@ export default function ProductsContent({ dictionary }: ProductsContentProps) {
         </motion.div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: 32, paddingBottom: 120 }}>
-          {/* OL Product */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4 }} className="surface-card" style={{ padding: 48 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 8 }}>
               <h2 style={{ fontSize: 32, fontWeight: 700, letterSpacing: '-0.02em' }}>{p.ol.title}</h2>
-              <span className="badge badge-live">● {p.ol.status}</span>
+              <span className="badge badge-live">
+                <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'currentColor', marginRight: 6 }} />
+                {p.ol.status}
+              </span>
             </div>
             <p style={{ fontSize: 18, color: 'var(--accent)', fontWeight: 500, marginBottom: 16 }}>{p.ol.tagline}</p>
             <p style={{ fontSize: 16, color: 'var(--foreground-muted)', lineHeight: 1.7, marginBottom: 12, maxWidth: 720 }}>{p.ol.description}</p>
@@ -43,13 +46,12 @@ export default function ProductsContent({ dictionary }: ProductsContentProps) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 12 }}>
               {p.ol.features.map((f: string, i: number) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--foreground-muted)' }}>
-                  <span style={{ color: 'var(--accent)' }}>✓</span> {f}
+                  <span style={{ color: 'var(--accent)', flexShrink: 0 }}><IconCheck size={14} /></span> {f}
                 </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Coming Soon */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.1 }} className="surface-card" style={{ padding: 48, borderStyle: 'dashed' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 12 }}>
               <h2 style={{ fontSize: 24, fontWeight: 600 }}>{p.comingSoon.title}</h2>

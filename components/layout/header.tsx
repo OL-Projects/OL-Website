@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import { IconSun, IconMoon, IconMenu, IconX } from '@/components/icons'
 
 interface HeaderProps {
   lang: string
@@ -69,12 +70,10 @@ export default function Header({ lang, dictionary }: HeaderProps) {
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 72 }}>
-        {/* Logo */}
         <Link href={`/${lang}`} style={{ fontSize: 22, fontWeight: 700, color: 'var(--foreground)', textDecoration: 'none', letterSpacing: '-0.03em' }}>
           OL
         </Link>
 
-        {/* Desktop Nav */}
         <nav style={{ display: 'flex', alignItems: 'center', gap: 32 }} className="hidden md:flex">
           {navItems.map(item => (
             <Link
@@ -93,8 +92,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
           ))}
         </nav>
 
-        {/* Controls */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Link
             href={langPath}
             style={{
@@ -116,16 +114,16 @@ export default function Header({ lang, dictionary }: HeaderProps) {
               background: 'none',
               border: '1px solid var(--surface-border)',
               borderRadius: 6,
-              padding: '6px 10px',
+              padding: '6px 8px',
               cursor: 'pointer',
               color: 'var(--foreground-muted)',
-              fontSize: 14,
+              display: 'inline-flex',
+              alignItems: 'center',
             }}
           >
-            {theme === 'dark' ? '☀️' : '🌙'}
+            {theme === 'dark' ? <IconSun /> : <IconMoon />}
           </button>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden"
@@ -134,18 +132,18 @@ export default function Header({ lang, dictionary }: HeaderProps) {
               background: 'none',
               border: '1px solid var(--surface-border)',
               borderRadius: 6,
-              padding: '6px 10px',
+              padding: '6px 8px',
               cursor: 'pointer',
               color: 'var(--foreground-muted)',
-              fontSize: 14,
+              display: 'inline-flex',
+              alignItems: 'center',
             }}
           >
-            {mobileOpen ? '✕' : '☰'}
+            {mobileOpen ? <IconX /> : <IconMenu />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
         <div className="md:hidden" style={{ padding: '16px 24px 24px', borderTop: '1px solid var(--surface-border)', background: 'var(--background)' }}>
           {navItems.map(item => (

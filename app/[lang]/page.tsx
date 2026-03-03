@@ -2,6 +2,7 @@ import { getDictionary } from '@/lib/dictionary'
 import HeroSection from '@/components/sections/hero'
 import ServicesSection from '@/components/sections/services'
 import CTASection from '@/components/sections/cta'
+import { IconShield, IconBolt, IconMapPin } from '@/components/icons'
 import Link from 'next/link'
 
 export async function generateStaticParams() {
@@ -11,6 +12,8 @@ export async function generateStaticParams() {
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params
   const dict = await getDictionary(lang as 'en' | 'fr')
+
+  const principleIcons = [IconShield, IconBolt, IconMapPin]
 
   return (
     <main>
@@ -61,13 +64,16 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             {dict.principles.title}
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
-            {[dict.principles.privacy, dict.principles.performance, dict.principles.canadian].map((p: { title: string; description: string }, i: number) => (
-              <div key={i} className="surface-card" style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 28, marginBottom: 16 }}>{['🔒', '⚡', '🇨🇦'][i]}</div>
-                <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>{p.title}</h3>
-                <p style={{ fontSize: 15, color: 'var(--foreground-muted)', lineHeight: 1.6 }}>{p.description}</p>
-              </div>
-            ))}
+            {[dict.principles.privacy, dict.principles.performance, dict.principles.canadian].map((p: { title: string; description: string }, i: number) => {
+              const Icon = principleIcons[i]
+              return (
+                <div key={i} className="surface-card" style={{ textAlign: 'center' }}>
+                  <div style={{ color: 'var(--accent)', marginBottom: 16, display: 'flex', justifyContent: 'center' }}><Icon size={28} /></div>
+                  <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 8 }}>{p.title}</h3>
+                  <p style={{ fontSize: 15, color: 'var(--foreground-muted)', lineHeight: 1.6 }}>{p.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

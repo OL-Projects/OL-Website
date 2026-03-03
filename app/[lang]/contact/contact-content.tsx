@@ -61,7 +61,7 @@ export default function ContactContent({ dictionary }: ContactContentProps) {
               </div>
               <div>
                 <div style={{ fontSize: 13, color: 'var(--foreground-subtle)', marginBottom: 4, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Location</div>
-                <span style={{ fontSize: 15, color: 'var(--foreground-muted)' }}>{c.direct.location} 🇨🇦</span>
+                <span style={{ fontSize: 15, color: 'var(--foreground-muted)' }}>{c.direct.location}</span>
               </div>
             </div>
           </motion.div>

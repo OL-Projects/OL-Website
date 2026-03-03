@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import type { Dictionary } from '@/lib/dictionary'
 import { FadeIn } from '@/components/animations/fade-in'
+import { IconCheck } from '@/components/icons'
 
 interface PrivacyContentProps {
   dict: Dictionary
@@ -58,64 +59,24 @@ export function PrivacyContent({ dict, lang }: PrivacyContentProps) {
 
               <div className="grid gap-4">
                 {[
-                  {
-                    icon: '📷',
-                    title: 'Camera',
-                    description: 'Used to capture delivery proof photos. Photos are stored locally on your device and optionally synced to your Firebase cloud database.',
-                  },
-                  {
-                    icon: '📍',
-                    title: 'Location',
-                    description: 'Used for map-based navigation, delivery tracking, route optimization, and nearby location search. Location data is processed locally and through Apple Maps.',
-                  },
-                  {
-                    icon: '👥',
-                    title: 'Contacts',
-                    description: 'Used to link device contacts with client records in the CRM. Contact data is read only when you choose to import a contact.',
-                  },
-                  {
-                    icon: '📅',
-                    title: 'Calendar',
-                    description: 'Used by the AI assistant to create calendar events on your behalf. Events are created in your local Apple Calendar.',
-                  },
-                  {
-                    icon: '✅',
-                    title: 'Reminders',
-                    description: 'Used by the AI assistant to create and manage reminders. Reminders are created in your local Apple Reminders app.',
-                  },
-                  {
-                    icon: '🎤',
-                    title: 'Microphone',
-                    description: 'Used for voice conversations with the AI assistant. Audio is streamed to your configured AI provider for processing and is not stored by OL.',
-                  },
-                  {
-                    icon: '🗣️',
-                    title: 'Speech Recognition',
-                    description: 'Used for voice-to-text transcription. Processing is handled by Apple\'s on-device speech recognition framework.',
-                  },
-                  {
-                    icon: '🔐',
-                    title: 'Face ID',
-                    description: 'Used for secure authentication and ARKit-based eye tracking accessibility features. Biometric data never leaves your device.',
-                  },
-                  {
-                    icon: '🖼️',
-                    title: 'Photos',
-                    description: 'Used to access your photo library for delivery documentation. Photos are only accessed when you explicitly select them.',
-                  },
-                  {
-                    icon: '🌐',
-                    title: 'Local Network',
-                    description: 'Used for SSH connections and Wake-on-LAN functionality. Network discovery data stays on your local network.',
-                  },
+                  { title: 'Camera', description: 'Used to capture delivery proof photos. Photos are stored locally on your device and optionally synced to your Firebase cloud database.' },
+                  { title: 'Location', description: 'Used for map-based navigation, delivery tracking, route optimization, and nearby location search. Location data is processed locally and through Apple Maps.' },
+                  { title: 'Contacts', description: 'Used to link device contacts with client records in the CRM. Contact data is read only when you choose to import a contact.' },
+                  { title: 'Calendar', description: 'Used by the AI assistant to create calendar events on your behalf. Events are created in your local Apple Calendar.' },
+                  { title: 'Reminders', description: 'Used by the AI assistant to create and manage reminders. Reminders are created in your local Apple Reminders app.' },
+                  { title: 'Microphone', description: 'Used for voice conversations with the AI assistant. Audio is streamed to your configured AI provider for processing and is not stored by OL.' },
+                  { title: 'Speech Recognition', description: 'Used for voice-to-text transcription. Processing is handled by Apple\'s on-device speech recognition framework.' },
+                  { title: 'Face ID', description: 'Used for secure authentication and ARKit-based eye tracking accessibility features. Biometric data never leaves your device.' },
+                  { title: 'Photos', description: 'Used to access your photo library for delivery documentation. Photos are only accessed when you explicitly select them.' },
+                  { title: 'Local Network', description: 'Used for SSH connections and Wake-on-LAN functionality. Network discovery data stays on your local network.' },
                 ].map((item) => (
                   <div
                     key={item.title}
                     className="flex gap-4 p-4 rounded-xl bg-white dark:bg-white/[0.03] border border-gray-200 dark:border-white/10"
                   >
-                    <span className="text-2xl flex-shrink-0" role="img" aria-label={item.title}>
-                      {item.icon}
-                    </span>
+                    <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-xs font-bold text-blue-600 dark:text-blue-400">{item.title.charAt(0)}</span>
+                    </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white">{item.title}</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{item.description}</p>
@@ -253,7 +214,7 @@ export function PrivacyContent({ dict, lang }: PrivacyContentProps) {
                   'No user data is sold to third parties.',
                 ].map((point, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5">✓</span>
+                    <span className="text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5"><IconCheck size={16} /></span>
                     <span>{point}</span>
                   </li>
                 ))}
