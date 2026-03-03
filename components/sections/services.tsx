@@ -1,65 +1,69 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import type { Dictionary } from '@/lib/dictionary'
-import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations/fade-in'
 
-interface ServicesSectionProps {
-  dict: Dictionary
+interface ServicesProps {
+  dictionary: {
+    capabilities: {
+      title: string
+      subtitle: string
+      apps: { title: string; description: string }
+      software: { title: string; description: string }
+      web: { title: string; description: string }
+      ai: { title: string; description: string }
+    }
+  }
 }
 
 const icons = {
-  diagnose: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-    </svg>
-  ),
-  design: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-    </svg>
-  ),
-  build: (
-    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-    </svg>
-  ),
+  apps: '📱',
+  software: '💻',
+  web: '🌐',
+  ai: '🤖',
 }
 
-export function ServicesSection({ dict }: ServicesSectionProps) {
-  const services = [
-    { key: 'diagnose', ...dict.services.diagnose, icon: icons.diagnose },
-    { key: 'design', ...dict.services.design, icon: icons.design },
-    { key: 'build', ...dict.services.build, icon: icons.build },
+export default function ServicesSection({ dictionary }: ServicesProps) {
+  const items = [
+    { key: 'apps', ...dictionary.capabilities.apps },
+    { key: 'software', ...dictionary.capabilities.software },
+    { key: 'web', ...dictionary.capabilities.web },
+    { key: 'ai', ...dictionary.capabilities.ai },
   ]
 
   return (
-    <section className="py-32 bg-gray-50 dark:bg-[#050505]">
-      <div className="max-w-6xl mx-auto px-6">
-        <FadeIn>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-            {dict.services.title}
+    <section className="section" style={{ background: 'var(--background-subtle)' }}>
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          style={{ textAlign: 'center', marginBottom: 64 }}
+        >
+          <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 16 }}>
+            {dictionary.capabilities.title}
           </h2>
-        </FadeIn>
+          <p style={{ fontSize: 18, color: 'var(--foreground-muted)', maxWidth: 560, margin: '0 auto' }}>
+            {dictionary.capabilities.subtitle}
+          </p>
+        </motion.div>
 
-        <StaggerContainer className="grid md:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <StaggerItem key={service.key}>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="p-8 rounded-2xl bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-blue-500/50 transition-colors h-full shadow-sm dark:shadow-none"
-              >
-                <div className="w-14 h-14 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{service.description}</p>
-              </motion.div>
-            </StaggerItem>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 24 }}>
+          {items.map((item, i) => (
+            <motion.div
+              key={item.key}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="surface-card"
+            >
+              <div style={{ fontSize: 32, marginBottom: 16 }}>{icons[item.key as keyof typeof icons]}</div>
+              <h3 style={{ fontSize: 20, fontWeight: 600, marginBottom: 12 }}>{item.title}</h3>
+              <p style={{ fontSize: 15, color: 'var(--foreground-muted)', lineHeight: 1.6 }}>{item.description}</p>
+            </motion.div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   )

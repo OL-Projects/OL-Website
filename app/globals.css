@@ -1,300 +1,190 @@
 @import "tailwindcss";
 
-/* ========================================
-   DESIGN SYSTEM - COLOR TOKENS
-   ======================================== */
-
 :root {
-  /* Light Mode - Clean, professional */
   --background: #ffffff;
-  --background-subtle: #f9fafb;
-  --foreground: #111827;
-  --foreground-muted: #4b5563;
-  --foreground-subtle: #6b7280;
-  
-  /* Surfaces */
-  --surface: #ffffff;
-  --surface-hover: #f3f4f6;
-  --surface-elevated: #ffffff;
-  
-  /* Borders */
-  --border: #e5e7eb;
-  --border-hover: #d1d5db;
-  
-  /* Accent */
+  --background-subtle: #f8fafc;
+  --foreground: #0f172a;
+  --foreground-muted: #475569;
+  --foreground-subtle: #64748b;
   --accent: #2563eb;
   --accent-hover: #1d4ed8;
-  --accent-glow: rgba(37, 99, 235, 0.15);
-  --accent-soft: rgba(37, 99, 235, 0.1);
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --accent-subtle: rgba(37, 99, 235, 0.08);
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+  --surface-border: #e2e8f0;
+  --surface-border-hover: #cbd5e1;
+  --success: #16a34a;
+  --font-geist-sans: "Geist", system-ui, -apple-system, sans-serif;
+  --font-geist-mono: "Geist Mono", ui-monospace, monospace;
 }
 
 .dark {
-  /* Dark Mode - Rich, immersive */
-  --background: #030712;
-  --background-subtle: #111827;
-  --foreground: #f9fafb;
-  --foreground-muted: #9ca3af;
-  --foreground-subtle: #6b7280;
-  
-  /* Surfaces */
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.06);
-  --surface-elevated: rgba(255, 255, 255, 0.05);
-  
-  /* Borders */
-  --border: rgba(255, 255, 255, 0.1);
-  --border-hover: rgba(255, 255, 255, 0.2);
-  
-  /* Accent */
+  --background: #08090d;
+  --background-subtle: #0f1117;
+  --foreground: #f1f5f9;
+  --foreground-muted: #94a3b8;
+  --foreground-subtle: #64748b;
   --accent: #3b82f6;
   --accent-hover: #60a5fa;
-  --accent-glow: rgba(59, 130, 246, 0.3);
-  --accent-soft: rgba(59, 130, 246, 0.15);
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --accent-subtle: rgba(59, 130, 246, 0.1);
+  --surface: #12141c;
+  --surface-hover: #1a1d2a;
+  --surface-border: rgba(255, 255, 255, 0.08);
+  --surface-border-hover: rgba(255, 255, 255, 0.14);
 }
 
-/* ========================================
-   BASE STYLES
-   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 body {
-  background-color: var(--background);
+  background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
-  overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-geist-sans);
+  line-height: 1.7;
+  font-size: 16px;
 }
-
-/* ========================================
-   PERFORMANCE OPTIMIZATIONS
-   ======================================== */
-
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
-.gpu-accelerated {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-.content-auto {
-  content-visibility: auto;
-  contain-intrinsic-size: 0 500px;
-}
-
-/* ========================================
-   SMOOTH TRANSITIONS
-   ======================================== */
-
-a, button, input, select, textarea {
-  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* ========================================
-   VISUAL EFFECTS
-   ======================================== */
 
 ::selection {
-  background-color: var(--accent);
+  background: var(--accent);
   color: white;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
 }
 
-.glow {
-  box-shadow: 0 0 40px var(--accent-glow);
+/* Focus States — Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.dark .glass {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.grid-pattern {
-  background-image: 
-    linear-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* ========================================
-   ANIMATED GRADIENT
-   ======================================== */
-
-@keyframes gradient-rotate {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.gradient-border {
-  position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-  background-size: 200% 200%;
-  animation: gradient-rotate 3s ease infinite;
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
-
-.gradient-border:hover::before {
-  opacity: 1;
-}
-
-/* ========================================
-   SCROLLBAR
-   ======================================== */
-
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: var(--foreground-subtle);
-  border-radius: 4px;
-  opacity: 0.5;
+  background: var(--surface-border);
+  border-radius: 3px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  opacity: 0.7;
+/* Container */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--foreground-subtle) transparent;
+/* Section spacing */
+.section {
+  padding: 120px 0;
 }
-
-/* ========================================
-   ANIMATIONS
-   ======================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
   }
 }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.skeleton {
-  background: linear-gradient(
-    90deg,
-    var(--surface) 25%,
-    var(--surface-hover) 50%,
-    var(--surface) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
-
-/* ========================================
-   CARD STYLES
-   ======================================== */
-
-.card {
+/* Surface card */
+.surface-card {
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--surface-border);
+  border-radius: 12px;
+  padding: 32px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.surface-card:hover {
+  border-color: var(--surface-border-hover);
 }
 
-.card:hover {
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-lg);
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.btn-primary:active {
+  transform: scale(0.98);
 }
 
-.card-lift {
-  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--surface-border);
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  border-color: var(--surface-border-hover);
+  background: var(--surface-hover);
 }
 
-.card-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+/* Status badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.badge-live {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--success);
+}
+.badge-dev {
+  background: var(--accent-subtle);
+  color: var(--accent);
 }
 
-/* ========================================
-   TYPOGRAPHY
-   ======================================== */
-
-.text-balance {
-  text-wrap: balance;
-}
-
-.line-clamp-1 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
-.line-clamp-3 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+/* Tech pill */
+.tech-pill {
+  display: inline-flex;
+  padding: 6px 16px;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--foreground-muted);
 }

@@ -2,70 +2,64 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import type { Dictionary } from '@/lib/dictionary'
 
-interface HeroSectionProps {
-  dict: Dictionary
+interface HeroProps {
   lang: string
+  dictionary: {
+    hero: { title: string; subtitle: string; cta: string; ctaSecondary: string }
+  }
 }
 
-export function HeroSection({ dict, lang }: HeroSectionProps) {
+export default function HeroSection({ lang, dictionary }: HeroProps) {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden grid-pattern">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5" />
-      
-      <div className="max-w-6xl mx-auto px-6 py-20 relative z-10">
+    <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+      <div className="container" style={{ textAlign: 'center', paddingTop: 120, paddingBottom: 120 }}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="text-center"
+          transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-            <span className="gradient-text">{dict.hero.title}</span>
+          {/* Accent label */}
+          <div style={{ marginBottom: 24, display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', background: 'var(--accent-subtle)', borderRadius: 9999, fontSize: 13, fontWeight: 500, color: 'var(--accent)' }}>
+            <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--success)' }} />
+            Technology & Innovation
+          </div>
+
+          {/* Title */}
+          <h1 style={{ fontSize: 'clamp(36px, 6vw, 72px)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.03em', color: 'var(--foreground)', maxWidth: 800, margin: '0 auto 24px' }}>
+            {dictionary.hero.title}
           </h1>
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-lg md:text-xl text-gray-700 dark:text-gray-400 max-w-2xl mx-auto mb-10"
-          >
-            {dict.hero.subtitle}
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
-            <Link
-              href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-medium hover:scale-105 transition-transform shadow-lg"
-            >
-              {dict.hero.cta}
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+
+          {/* Subtitle */}
+          <p style={{ fontSize: 'clamp(16px, 2vw, 20px)', color: 'var(--foreground-muted)', maxWidth: 640, margin: '0 auto 48px', lineHeight: 1.6 }}>
+            {dictionary.hero.subtitle}
+          </p>
+
+          {/* CTAs */}
+          <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href={`/${lang}/solutions`} className="btn-primary">
+              {dictionary.hero.cta}
             </Link>
-          </motion.div>
+            <Link href={`/${lang}/products`} className="btn-secondary">
+              {dictionary.hero.ctaSecondary}
+            </Link>
+          </div>
         </motion.div>
       </div>
-      
+
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+        animate={{ opacity: 0.4 }}
+        transition={{ delay: 1.5 }}
+        style={{ position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)' }}
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
+          style={{ width: 24, height: 40, border: '2px solid var(--surface-border)', borderRadius: 12, display: 'flex', justifyContent: 'center', paddingTop: 8 }}
         >
-          <motion.div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2" />
+          <div style={{ width: 3, height: 8, borderRadius: 2, background: 'var(--foreground-muted)' }} />
         </motion.div>
       </motion.div>
     </section>

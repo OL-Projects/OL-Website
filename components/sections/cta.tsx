@@ -2,45 +2,36 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import type { Dictionary } from '@/lib/dictionary'
-import { FadeIn } from '@/components/animations/fade-in'
 
-interface CTASectionProps {
-  dict: Dictionary
+interface CTAProps {
   lang: string
+  dictionary: {
+    cta: { title: string; subtitle: string; button: string }
+  }
 }
 
-export function CTASection({ dict, lang }: CTASectionProps) {
+export default function CTASection({ lang, dictionary }: CTAProps) {
   return (
-    <section className="py-32 relative overflow-hidden bg-gray-50 dark:bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-purple-500/5" />
-      
-      <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-        <FadeIn>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            {dict.cta.title}
+    <section className="section">
+      <div className="container">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="surface-card"
+          style={{ textAlign: 'center', padding: '80px 40px', borderColor: 'var(--accent-subtle)' }}
+        >
+          <h2 style={{ fontSize: 'clamp(24px, 4vw, 36px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 16 }}>
+            {dictionary.cta.title}
           </h2>
-        </FadeIn>
-        
-        <FadeIn delay={0.1}>
-          <p className="text-lg text-gray-700 dark:text-gray-400 mb-10">
-            {dict.cta.subtitle}
+          <p style={{ fontSize: 18, color: 'var(--foreground-muted)', maxWidth: 480, margin: '0 auto 32px' }}>
+            {dictionary.cta.subtitle}
           </p>
-        </FadeIn>
-        
-        <FadeIn delay={0.2}>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
-            <Link
-              href={`/${lang}/contact`}
-              className="inline-flex items-center gap-2 px-10 py-5 bg-blue-500 text-white rounded-full font-medium text-lg hover:bg-blue-600 transition-colors shadow-lg shadow-blue-500/25"
-            >
-              {dict.cta.button}
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </motion.div>
-        </FadeIn>
+          <Link href={`/${lang}/contact`} className="btn-primary">
+            {dictionary.cta.button}
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

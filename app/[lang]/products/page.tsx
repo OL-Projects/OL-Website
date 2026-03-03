@@ -1,5 +1,5 @@
 import { getDictionary } from '@/lib/dictionary'
-import ProductsContent from './apps-content'
+import ProductsContent from '../apps/apps-content'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
