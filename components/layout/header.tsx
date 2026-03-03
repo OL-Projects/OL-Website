@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
+import { useTheme } from '@/components/theme-provider'
 import { IconSun, IconMoon, IconMenu, IconX } from '@/components/icons'
 
 interface HeaderProps {
@@ -22,26 +23,13 @@ export default function Header({ lang, dictionary }: HeaderProps) {
   const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
-
-  useEffect(() => {
-    const saved = localStorage.getItem('theme') || 'dark'
-    setTheme(saved as 'dark' | 'light')
-    document.documentElement.classList.toggle('dark', saved === 'dark')
-  }, [])
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
-
-  const toggleTheme = () => {
-    const next = theme === 'dark' ? 'light' : 'dark'
-    setTheme(next)
-    localStorage.setItem('theme', next)
-    document.documentElement.classList.toggle('dark', next === 'dark')
-  }
 
   const otherLang = lang === 'en' ? 'fr' : 'en'
   const langPath = pathname.replace(`/${lang}`, `/${otherLang}`)

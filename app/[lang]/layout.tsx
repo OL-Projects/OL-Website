@@ -35,8 +35,8 @@ export default async function LangLayout({
   const dict = await getDictionary(lang as 'en' | 'fr')
 
   return (
-    <html lang={lang} suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} dark`} style={{ fontFamily: 'var(--font-geist-sans)' }}>
+    <html lang={lang} className="dark" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ fontFamily: 'var(--font-geist-sans)' }}>
         <ThemeProvider>
           <Header lang={lang} dictionary={dict} />
           <div style={{ minHeight: '100vh' }}>
