@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { FadeIn } from '@/components/animations/fade-in'
 
 interface CTAProps {
   lang: string
@@ -12,26 +12,22 @@ interface CTAProps {
 
 export default function CTASection({ lang, dictionary }: CTAProps) {
   return (
-    <section className="section">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="surface-card"
-          style={{ textAlign: 'center', padding: '80px 40px', borderColor: 'var(--accent-subtle)' }}
-        >
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 36px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 16 }}>
+    <section style={{ padding: '120px 0' }}>
+      <div className="container" style={{ textAlign: 'center' }}>
+        <FadeIn>
+          <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 700, letterSpacing: '-0.02em', marginBottom: 16, color: 'var(--foreground)' }}>
             {dictionary.cta.title}
           </h2>
-          <p style={{ fontSize: 18, color: 'var(--foreground-muted)', maxWidth: 480, margin: '0 auto 32px' }}>
+          <p style={{ fontSize: 17, color: 'var(--foreground-muted)', maxWidth: 500, margin: '0 auto 40px' }}>
             {dictionary.cta.subtitle}
           </p>
-          <Link href={`/${lang}/contact`} className="btn-primary">
+          <Link
+            href={`/${lang}/contact`}
+            style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 36px', background: 'var(--accent)', color: '#fff', borderRadius: 10, fontSize: 15, fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s ease' }}
+          >
             {dictionary.cta.button}
           </Link>
-        </motion.div>
+        </FadeIn>
       </div>
     </section>
   )

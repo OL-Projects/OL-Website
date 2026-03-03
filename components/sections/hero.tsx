@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { FadeIn } from '@/components/animations/fade-in'
 
 interface HeroProps {
   lang: string
@@ -14,54 +14,44 @@ export default function HeroSection({ lang, dictionary }: HeroProps) {
   return (
     <section style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
       <div className="container" style={{ textAlign: 'center', paddingTop: 120, paddingBottom: 120 }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-        >
+        <FadeIn>
           {/* Accent label */}
           <div style={{ marginBottom: 24, display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 16px', background: 'var(--accent-subtle)', borderRadius: 9999, fontSize: 13, fontWeight: 500, color: 'var(--accent)' }}>
             <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--success)' }} />
-            Technology & Innovation
+            Technology &amp; Innovation
           </div>
 
-          {/* Title */}
-          <h1 style={{ fontSize: 'clamp(36px, 6vw, 72px)', fontWeight: 700, lineHeight: 1.1, letterSpacing: '-0.03em', color: 'var(--foreground)', maxWidth: 800, margin: '0 auto 24px' }}>
+          <h1 style={{ fontSize: 'clamp(40px, 6vw, 72px)', fontWeight: 700, letterSpacing: '-0.03em', lineHeight: 1.05, maxWidth: 800, margin: '0 auto 24px', color: 'var(--foreground)' }}>
             {dictionary.hero.title}
           </h1>
 
-          {/* Subtitle */}
-          <p style={{ fontSize: 'clamp(16px, 2vw, 20px)', color: 'var(--foreground-muted)', maxWidth: 640, margin: '0 auto 48px', lineHeight: 1.6 }}>
+          <p style={{ fontSize: 'clamp(16px, 2vw, 20px)', color: 'var(--foreground-muted)', maxWidth: 600, margin: '0 auto 48px', lineHeight: 1.6 }}>
             {dictionary.hero.subtitle}
           </p>
 
-          {/* CTAs */}
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link href={`/${lang}/solutions`} className="btn-primary">
+            <Link
+              href={`/${lang}/solutions`}
+              style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 32px', background: 'var(--accent)', color: '#fff', borderRadius: 10, fontSize: 15, fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s ease' }}
+            >
               {dictionary.hero.cta}
             </Link>
-            <Link href={`/${lang}/products`} className="btn-secondary">
+            <Link
+              href={`/${lang}/products`}
+              style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 32px', border: '1px solid var(--surface-border)', color: 'var(--foreground)', borderRadius: 10, fontSize: 15, fontWeight: 500, textDecoration: 'none', transition: 'border-color 0.2s ease' }}
+            >
               {dictionary.hero.ctaSecondary}
             </Link>
           </div>
-        </motion.div>
-      </div>
+        </FadeIn>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        transition={{ delay: 1.5 }}
-        style={{ position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)' }}
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          style={{ width: 24, height: 40, border: '2px solid var(--surface-border)', borderRadius: 12, display: 'flex', justifyContent: 'center', paddingTop: 8 }}
-        >
-          <div style={{ width: 3, height: 8, borderRadius: 2, background: 'var(--foreground-muted)' }} />
-        </motion.div>
-      </motion.div>
+        {/* Scroll indicator */}
+        <div style={{ position: 'absolute', bottom: 40, left: '50%', transform: 'translateX(-50%)', opacity: 0.4 }}>
+          <div style={{ width: 24, height: 40, border: '2px solid var(--foreground-muted)', borderRadius: 12, display: 'flex', justifyContent: 'center', paddingTop: 8 }}>
+            <div className="scroll-dot" style={{ width: 3, height: 8, background: 'var(--foreground-muted)', borderRadius: 2 }} />
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

@@ -18,7 +18,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   return (
     <main>
       <HeroSection lang={lang} dictionary={dict} />
-      <ServicesSection dictionary={dict} />
+      <ServicesSection lang={lang} dictionary={dict} />
 
       {/* Technology Strip */}
       <section style={{ padding: '48px 0', borderTop: '1px solid var(--surface-border)', borderBottom: '1px solid var(--surface-border)' }}>

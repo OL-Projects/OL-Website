@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { ReactNode } from 'react'
+import { useRef, useEffect, useState, type ReactNode } from 'react'
 
 interface FadeInProps {
   children: ReactNode
@@ -10,73 +9,48 @@ interface FadeInProps {
   className?: string
 }
 
-// Optimized easing curve for smooth, natural motion
-const smoothEase: [number, number, number, number] = [0.25, 0.1, 0.25, 1]
+const directionTransforms = {
+  up: 'translateY(20px)',
+  down: 'translateY(-20px)',
+  left: 'translateX(20px)',
+  right: 'translateX(-20px)',
+}
 
 export function FadeIn({ children, delay = 0, direction = 'up', className = '' }: FadeInProps) {
-  // Reduced distances for subtler, faster animations
-  const directions = {
-    up: { y: 20 },
-    down: { y: -20 },
-    left: { x: 20 },
-    right: { x: -20 },
-  }
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true)
+          observer.unobserve(el)
+        }
+      },
+      { rootMargin: '-50px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0, ...directions[direction] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ 
-        duration: 0.4, 
-        delay, 
-        ease: smoothEase 
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? 'none' : directionTransforms[direction],
+        transition: `opacity 0.5s cubic-bezier(0.25,0.1,0.25,1) ${delay}s, transform 0.5s cubic-bezier(0.25,0.1,0.25,1) ${delay}s`,
       }}
-      className={`will-change-transform ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
 export function StaggerContainer({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-50px' }}
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.08,
-            delayChildren: 0.05,
-          },
-        },
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  )
-}
-
-export function StaggerItem({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 15 },
-        visible: { 
-          opacity: 1, 
-          y: 0, 
-          transition: { 
-            duration: 0.35,
-            ease: smoothEase
-          } 
-        },
-      }}
-      className={`will-change-transform ${className}`}
-    >
-      {children}
-    </motion.div>
-  )
+  return <div className={className}>{children}</div>
 }
