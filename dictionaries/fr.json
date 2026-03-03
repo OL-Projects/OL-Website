@@ -126,8 +126,22 @@
       "D'après ce que vous avez décrit, je vous recommande de réserver un appel avec notre équipe pour discuter d'une solution personnalisée."
     ]
   },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "subtitle": "Comment OL gère vos données.",
+    "lastUpdated": "Dernière mise à jour",
+    "backToHome": "Retour à l'accueil"
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "subtitle": "Les règles du jeu.",
+    "lastUpdated": "Dernière mise à jour",
+    "backToHome": "Retour à l'accueil"
+  },
   "footer": {
     "tagline": "Transformer le chaos en systèmes.",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
   }
 }

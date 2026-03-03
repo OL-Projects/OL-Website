@@ -126,8 +126,22 @@
       "Based on what you've described, I'd recommend booking a call with our team to discuss a customized solution."
     ]
   },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "How OL handles your data.",
+    "lastUpdated": "Last updated",
+    "backToHome": "Back to Home"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "subtitle": "The rules of the road.",
+    "lastUpdated": "Last updated",
+    "backToHome": "Back to Home"
+  },
   "footer": {
     "tagline": "Turning chaos into systems.",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   }
 }

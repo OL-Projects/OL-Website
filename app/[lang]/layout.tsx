@@ -67,7 +67,7 @@ export default async function RootLayout({
           <main className="min-h-screen pt-16">
             {children}
           </main>
-          <Footer dict={dict} />
+          <Footer dict={dict} lang={lang} />
           <ChatWidget dict={dict} />
         </ThemeProvider>
       </body>
